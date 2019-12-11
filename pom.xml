@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>cucumber</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <!-- TODO: sample project's website -->
+    <url>http://www.amazon.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,6 +32,13 @@
             <version>1.2.6</version>
             <type>pom</type>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.2.6</version>
+            <type>pom</type>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
         <dependency>
             <groupId>info.cukes</groupId>
@@ -40,6 +47,29 @@
             <type>pom</type>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>2.12.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>1.2.6</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.0.0-alpha-3</version>
+        </dependency>
+
 
         <!--<dependency>-->
         <!--<groupId>net.serenity-bdd</groupId>-->
