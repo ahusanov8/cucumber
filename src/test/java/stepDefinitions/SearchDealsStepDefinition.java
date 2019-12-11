@@ -37,6 +37,8 @@ public class SearchDealsStepDefinition {
         System.out.println("resultContainerHeaderShoudHaveValue");
     }
 
+
+
 }
 
 

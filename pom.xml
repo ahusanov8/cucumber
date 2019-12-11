@@ -14,80 +14,61 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <junit.version>4.12</junit.version>
+        <cucumber.version>5.0.0-RC2</cucumber.version>
+        <selenium.version>4.0.0-alpha-3</selenium.version>
+        <gherkin.version>8.2.1</gherkin.version>
+        <maven.compiler.version>3.8</maven.compiler.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.2.5</version>
-            <type>pom</type>
+            <version>${cucumber.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm</artifactId>
-            <version>1.2.5</version>
+            <version>${cucumber.version}</version>
             <type>pom</type>
-        </dependency>
-        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/info.cukes/cucumber-junit &ndash;&gt;-->
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
-            <type>pom</type>
-            <scope>test</scope>
         </dependency>
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-junit &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>io.cucumber</groupId>-->
-            <!--<artifactId>cucumber-junit</artifactId>-->
-            <!--<version>5.0.0-RC2</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
         <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>gherkin</artifactId>
-            <version>2.12.2</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>1.2.5</version>
-            <type>pom</type>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>${gherkin.version}</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.0.0-alpha-3</version>
+            <version>${selenium.version}</version>
         </dependency>
-
-
-        <!--<dependency>-->
-        <!--<groupId>net.serenity-bdd</groupId>-->
-        <!--<artifactId>serenity-core</artifactId>-->
-        <!--<version>1.2.5-rc.11</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>net.serenity-bdd</groupId>-->
-        <!--<artifactId>serenity-junit</artifactId>-->
-        <!--<version>1.2.5-rc.11</version>-->
-        <!--</dependency>-->
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-scala -->
 
     </dependencies>
 
@@ -106,7 +87,12 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>${maven.compiler.version}</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -133,22 +119,6 @@
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-
-                <!--<plugin>-->
-                <!--<groupId>net.serenity-bdd.maven.plugins</groupId>-->
-                <!--<artifactId>serenity-maven-plugin</artifactId>-->
-                <!--<version>1.2.5-rc.6</version>-->
-                <!--<executions>-->
-                <!--<execution>-->
-                <!--<id>serenity-reports</id>-->
-                <!--<phase>post-integration-test</phase>-->
-                <!--<goals>-->
-                <!--<goal>aggregate</goal>-->
-                <!--</goals>-->
-                <!--</execution>-->
-                <!--</executions>-->
-                <!--</plugin>-->
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
