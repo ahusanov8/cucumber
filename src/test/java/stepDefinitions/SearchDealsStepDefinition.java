@@ -3,7 +3,10 @@ package stepDefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
 
+@RunWith(Cucumber.class)
 public class SearchDealsStepDefinition {
 
     @Given("user is on Amazon Home page")
@@ -29,7 +32,7 @@ public class SearchDealsStepDefinition {
         System.out.println("searchDisplaysTheResultSet");
     }
     @Then("result container header should have 'Shop all deals'")
-    public void resultContainerHeaderShoudHaveValue(Sting message) {
+    public void resultContainerHeaderShoudHaveValue(String message) {
         //todo: code to verify the message
         System.out.println("resultContainerHeaderShoudHaveValue");
     }

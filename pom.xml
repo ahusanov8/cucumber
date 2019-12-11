@@ -6,11 +6,9 @@
 
     <groupId>com.automation</groupId>
     <artifactId>cucumber</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <name>cucumber</name>
-    <!-- TODO: sample project's website -->
-    <url>http://www.amazon.com</url>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+    <name>Cucumber-Java</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,24 +27,32 @@
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.2.6</version>
+            <version>1.2.5</version>
             <type>pom</type>
         </dependency>
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm -->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-jvm</artifactId>
-            <version>1.2.6</version>
+            <version>1.2.5</version>
             <type>pom</type>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/info.cukes/cucumber-junit &ndash;&gt;-->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.2.6</version>
+            <version>1.2.5</version>
             <type>pom</type>
             <scope>test</scope>
         </dependency>
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-junit &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>io.cucumber</groupId>-->
+            <!--<artifactId>cucumber-junit</artifactId>-->
+            <!--<version>5.0.0-RC2</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+
         <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
         <dependency>
             <groupId>info.cukes</groupId>
@@ -58,7 +64,7 @@
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>1.2.6</version>
+            <version>1.2.5</version>
             <type>pom</type>
             <scope>test</scope>
         </dependency>
