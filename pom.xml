@@ -18,7 +18,7 @@
         <junit.version>4.12</junit.version>
         <cucumber.version>5.0.0-RC2</cucumber.version>
         <selenium.version>4.0.0-alpha-3</selenium.version>
-        <gherkin.version>8.2.1</gherkin.version>
+        <gherkin.version>8.1.1</gherkin.version>
         <maven.compiler.version>3.8</maven.compiler.version>
     </properties>
 
@@ -56,11 +56,21 @@
             <version>${cucumber.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+        <!--TODO: facing compiling issues with latest gherkin-->
+        <!--<dependency>-->
+            <!--<groupId>io.cucumber</groupId>-->
+            <!--<artifactId>gherkin</artifactId>-->
+            <!--<version>${gherkin.version}</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
         <dependency>
-            <groupId>io.cucumber</groupId>
+            <groupId>info.cukes</groupId>
             <artifactId>gherkin</artifactId>
-            <version>${gherkin.version}</version>
+            <version>2.12.2</version>
+            <scope>provided</scope>
         </dependency>
+
 
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
