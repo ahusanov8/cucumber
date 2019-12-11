@@ -6,3 +6,8 @@ When user selects "Deals" option from Departmants
 When user clicks on search button
 Then search displays the result set
 Then result container header should have "Shop all deals"
+
+
+Scenario: Verify Amazon Home page Menus
+Given user is on Amazon Home page
+When
